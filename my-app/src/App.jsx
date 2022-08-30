@@ -6,8 +6,8 @@ import Home from "./pages/Home/Home"
 // import data from "./database/data.json"
 
 function App() {
-  const [UserId, setUserId] = useState(0)
-  const [isLogin, setIsLogin] = useState(true)
+  const [UserId, setUserId] = useState(1)
+  const [isLogin, setIsLogin] = useState(false)
   return (
     <UserContext.Provider value={{ UserId, isLogin }}>
       <BrowserRouter>
