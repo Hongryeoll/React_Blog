@@ -5,6 +5,7 @@ import UserContext from "../../context/UserContext"
 import Author from './author/Author'
 import Category from './category/Category'
 import About from './about/About'
+import "./main.css"
 
 export default function Main() {
   const { isLogin } = useContext(UserContext)
@@ -31,7 +32,7 @@ export default function Main() {
 								<img src={post.thumbnail} alt="" />
 								<div className="contents-wrap">
 									<Category 
-                    Category={post.Category}
+                    category={post.category}
                   />
 									<h3>{post.title}</h3>
 									<Author 
