@@ -1,12 +1,16 @@
-import React from "react"
+import { useState } from "react"
 import { Browser, BrowserRouter, Route, Routes } from "react-router-dom"
+import UserContext from "./context/UserContext"
 import BlogDetail from "./pages/BlogDetail/BlogDeatail"
 import Home from "./pages/Home/Home"
 import data from "./database/data.json"
 
 function App() {
+  const [UserId, setUserId] = useState(0)
+  const [isLogin, setIsLogin] = useState(true)
   return (
-    <BrowserRouter>
+    <UserContext.Provider value={{ UserId, isLogin }}>
+      <BrowserRouter>
       <Routes>
         <Route 
           path="/" 
@@ -18,6 +22,7 @@ function App() {
         />
       </Routes>
     </BrowserRouter>
+    </UserContext.Provider>
   );
 }
 
