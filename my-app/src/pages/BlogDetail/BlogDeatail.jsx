@@ -4,7 +4,7 @@ import axios from "axios"
 
 export default function BlogDeatail() {
   const location = useLocation()
-  const postNumber = location.pathname.split('/')[1]
+  const postNumber = location.pathname.split('/')[2]
   const [post, setPost] = useState(undefined)
   useEffect(()=>{
     axios
